@@ -27,6 +27,7 @@ jobs:
 
       env:
         CI: true
+        GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
         ## APP: ${{env.APP}}
         # Deploy env
         # HOST: ${{ secrets.HOST }}
