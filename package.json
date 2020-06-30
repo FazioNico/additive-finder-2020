@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "api": "json-server --watch db.json",
     "prod": "http-server -p 8080 -c-1 dist/AdditiveFinder",
-    "deploy:ci": "ng deploy --base-href=/additive-finder-2020/ --no-silent"
+    "deploy:ci": "ng deploy --base-href=/additive-finder-2020/ --name='FazioNico' --email='contact@nicolasfazio.ch' --no-silent"
   },
   "private": true,
   "dependencies": {
