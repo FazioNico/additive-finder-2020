@@ -16,7 +16,7 @@ export class AdditivesService {
   ) { }
 
   async load() {
-    const data = await this._http.get<{additives?: any}>('/assets/db.json').pipe(
+    const data = await this._http.get<{additives?: any}>('/additive-finder-2020/assets/db.json').pipe(
       map((response) => response?.additives),
       // tap(),
     ).toPromise();
