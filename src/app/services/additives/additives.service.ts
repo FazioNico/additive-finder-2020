@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { first, map, tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class AdditivesService {
   ) { }
 
   async load() {
-    const data = await this._http.get<{additives?: any}>('/additive-finder-2020/assets/db.json').pipe(
+    const data = await this._http.get<{additives?: any}>(environment.url).pipe(
       map((response) => response?.additives),
       // tap(),
     ).toPromise();

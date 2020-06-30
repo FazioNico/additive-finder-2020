@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  url: '/additive-finder-2020/assets/db.json'
 };
