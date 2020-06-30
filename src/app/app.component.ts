@@ -33,7 +33,13 @@ export class AppComponent {
     if (isIos() && !isInStandaloneMode()) {
       const toast = await this._toastCtrl.create({
         header: 'Install PWA',
-        message: 'la la, lala, lalalala'
+        message: 'la la, lala, lalalala',
+        buttons: [
+          {
+            text: 'Ok',
+            role: 'ok'
+          }
+        ]
       });
       await toast.present();
 

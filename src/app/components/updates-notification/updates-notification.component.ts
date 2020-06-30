@@ -42,11 +42,15 @@ export class UpdatesNotificationComponent  {
   }
   private async _displayNotif() {
     console.log('display notification...');
-    const data = <ToastOptions>{
+    const data: ToastOptions = {
       message: 'Nouvelle mise à jours!',
       position: 'bottom',
-      showCloseButton: true,
-      closeButtonText: `Update`,
+      buttons: [
+        {
+          text: 'Update',
+          role: 'ok'
+        }
+      ]
     };
     const toast = await this._toast.create(data);
     await toast.present();
