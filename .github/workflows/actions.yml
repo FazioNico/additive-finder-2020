@@ -28,8 +28,7 @@ jobs:
       env:
         CI: true
         ## APP: ${{env.APP}}
-				## 
-        ## Deploy env
+        # Deploy env
         # HOST: ${{ secrets.HOST }}
         # PASS: ${{ secrets.PASS }}
         # USER: ${{ secrets.USER }}
