@@ -8,7 +8,9 @@
   <ion-list *ngIf="additives$|async as additives" class="ion-no-padding">
 
     <ion-item *ngFor="let item of additives.slice(0, max)" [routerLink]="item.id" class="ion-no-padding ion-no-margin">
-      <ion-thumbnail slot="start" [ngStyle]="{'background-color': item?.level|color}">
+      <ion-thumbnail 
+          slot="start" 
+          [ngStyle]="{'background-color': item?.level|color}">
         E{{item.id}}
       </ion-thumbnail>
       <ion-label class="ion-text-wrap">
